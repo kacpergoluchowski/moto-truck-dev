@@ -1,15 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=M+PLUS+Rounded+1c&display=swap');
+
 @font-face {
     font-family: Sequel-45;
     src: url('./assets/fonts/Sequel100Black-45.ttf');
-}
-
-@keyframes easeTransition {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 * {
@@ -31,7 +26,7 @@
         position: relative;
 
         .home_page-hero-video {
-            video {
+            video { 
                 width: 100vw;
                 height: 100vh;
                 object-fit: cover;
@@ -73,66 +68,111 @@
         }
     }
 
-    .home_page-about {
-        // background-color: red;
-        height: 80vh;
-    }
-
-    .home_page-offer-light {
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        url('./assets/images/offer-light-picture.png');
-        height: 90vh;
-    }
-
-    .home_page-offer-medium {
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        url('./assets/images/offer-medium-picture.jpg');       
-        height: 90vh;
-    }
-
-    .home_page-offer-heavy {
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        url('./assets/images/offer-heavy-picture.png');        
-        height: 90vh;
-    }
-
-    .home_page-offer-special {
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0)), 
-        url('./assets/images/offer-special-picture.png');
-        height: 90vh;
-    }
-
-    .home_page-offer-image-desc {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        bottom: 3vh;
-        width: 100%;
-        padding: 2vh 2vw;
-        box-sizing: border-box;
-
-        .arrow-box {
+    .home_page-offer {
+        .home_page-offer-navbar {
+            background-image: linear-gradient(to bottom, black, #292B35);
+            margin-top: -.4vh;
+            position: relative;
+            height: 12vh;
             display: flex;
-            gap: 1.5vw;
+            flex-direction: column;
+            justify-content: center;
+
+            .home_page-offer-navbar-box {
+                display: flex;
+                margin-left: 6vw;
+                margin-top: 4vh;
+                gap: 70px;
+            
+                p {
+                    font-family: 'Jura';
+                    font-size: 30px;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    padding: 0vh 1vw;
+                    color: rgba(255,255,255,0.6);
+                    transition: color .3s;
+                    letter-spacing: 2px;
+                }
+
+                p:hover {
+                    color: rgba(255,255,255,1)
+                }
+            }
         }
 
-        .type_car-box {
-            text-align: right;
-            .type {
-                font-size: 60px;
-                margin-bottom: -20px;
-                color: #B03702;
-            }
-            font-size: 35px;
+        .home_page-offer-navbar::after {
+            content: '';
+            background-image: linear-gradient(to top, rgba(0,0,0,0), #292B35);
+            width: 100%;
+            height: 55vh;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            z-index: 100;
         }
+
+        .home_page-offer-slide {
+            height: 87vh;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .car-type {
+                position: absolute;
+                top: 0;
+                left: 5vw;
+                z-index: 150;
+                font-size: 70px;
+                font-family: 'Roboto Flex';
+                color: #FF9100;
+                text-shadow: black 5px 1px 15px; 
+            
+                .type {
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+
+            .show-details {
+                position: absolute;
+                top: 22vh;
+                left: 5vw;
+                z-index: 150;
+                height: 7vh;
+                width: 13vw;
+                background-color: transparent;
+                border: solid rgba(255,255,255,0.6) 2px;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 17px;
+                font-family: 'Karla';
+                color: rgba(255,255,255,0.6);
+                gap: 35px;
+                cursor: pointer;
+                transition: all .3s;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            .show-details:hover {
+                border: solid rgba(255,255,255,1) 2px;
+                color: rgba(255,255,255,1);
+            }
+
+         
+        } 
     }
+
+    
+}
+
+@media only screen and (max-width: 1472px) {
+    
 }
