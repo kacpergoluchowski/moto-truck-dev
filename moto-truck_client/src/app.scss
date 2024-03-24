@@ -65,6 +65,10 @@
             background-image: linear-gradient(to bottom, black, rgba(0,0,0,0));
             padding-block: 1vh;
             font-size: 15px;
+
+            p {
+                position: relative;
+            }
         }
     }
 
